@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>여름휴가 활동 설문조사</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('images/summer.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .survey-container {
+      display: flex;
+      justify-content: center;
+      padding: 40px 0;
+    }
+
+    .survey-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      width: 70%;
+      max-width: 650px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #007BFF;
+    }
+
+    .question {
+      margin: 30px 0;
+      margin-left: 5%;
+    }
+
+    .question h3 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .question select {
+      width: 70%;
+      min-width: 200px;
+      padding: 10px 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: white;
+      color: #333;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><polygon fill="%23666" points="0,0 16,0 8,10"/></svg>');
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 12px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: border-color 0.3s ease;
+    }
+
+    .question select:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+
+
+    .submit-btn {
+      margin-top: 30px;
+      margin-left: 5%;
+      padding: 12px 20px;
+      font-size: 1rem;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    #q4-1-wrapper {
+      margin-left: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="survey-container">
+    <form id="surveyForm" class="survey-box">
+      <h1>여름휴가 설문조사</h1>
+
+      <div class="question">
+        <h3>1. 귀하의 연령대는?</h3>
+        <select name="q1" id="q1">
+          <option value="">선택하세요</option>
+          <option value="10대">10대</option>
+          <option value="20대">20대</option>
+          <option value="30대">30대</option>
+          <option value="40대">40대</option>
+          <option value="50대">50대</option>
+          <option value="60대 이상">60대 이상</option>
+        </select>
+        <p class="error-message" id="error-q1"></p>
+      </div>
+
+      <div class="question">
+        <h3>2. 귀하의 성별은?</h3>
+        <select name="q2" id="q2">
+          <option value="">선택하세요</option>
+          <option value="남성">남성</option>
+          <option value="여성">여성</option>
+        </select>
+        <p class="error-message" id="error-q2"></p>
+      </div>
+
+      <div class="question">
+        <h3>3. 가장 최근에 갔던 여름 휴가는 무엇인가요?</h3>
+        <select name="q3" id="q3">
+          <option value="">선택하세요</option>
+          <option value="해수욕, 물놀이">해수욕, 물놀이</option>
+          <option value="등산, 캠핑">등산, 캠핑</option>
+          <option value="문화생활">문화생활</option>
+          <option value="도시 관광">도시 관광</option>
+          <option value="휴양·힐링">휴양·힐링</option>
+          <option value="맛집 투어">맛집 투어</option>
+          <option value="친척·지인 방문">친척·지인 방문</option>
+          <option value="기타">기타</option>
+        </select>
+        <p class="error-message" id="error-q3"></p>
+      </div>
+
+      <div class="question">
+        <h3>4. 여름 휴가를 보낸 장소는 어디였나요?</h3>
+        <select name="q4" id="q4">
+          <option value="">선택하세요</option>
+          <option value="국내">국내</option>
+          <option value="해외">해외</option>
+        </select>
+        <p class="error-message" id="error-q4"></p>
+      </div>
+
+      <div class="question" id="q4-1-wrapper" style="display: none;">
+        <h3>4-1. 국내 어느 지역에서 보내셨나요?</h3>
+        <select name="q4-1" id="q4-1">
+          <option value="">선택하세요</option>
+          <option value="서울">서울</option>
+          <option value="부산">부산</option>
+          <option value="대구">대구</option>
+          <option value="대전">대전</option>
+          <option value="광주">광주</option>
+          <option value="울산">울산</option>
+          <option value="인천">인천</option>
+          <option value="세종">세종</option>
+          <option value="강원">강원</option>
+          <option value="경북">경북</option>
+          <option value="경남">경남</option>
+          <option value="전북">전북</option>
+          <option value="전남">전남</option>
+          <option value="충북">충북</option>
+          <option value="충남">충남</option>
+          <option value="제주">제주</option>
+        </select>
+        <p class="error-message" id="error-q4-1"></p>
+      </div>
+
+      <div class="question">
+        <h3>5. 주요 교통수단은 무엇이었나요?</h3>
+        <select name="q5" id="q5">
+          <option value="">선택하세요</option>
+          <option value="자동차">자동차</option>
+          <option value="버스">버스</option>
+          <option value="기차">기차</option>
+          <option value="항공편">항공편</option>
+          <option value="배">배</option>
+          <option value="도보">도보</option>
+        </select>
+        <p class="error-message" id="error-q5"></p>
+      </div>
+
+      <div class="question">
+        <h3>6. 여름휴가 기간은 며칠이었나요?</h3>
+        <select name="q6" id="q6">
+          <option value="">선택하세요</option>
+          <option value="1일">1일</option>
+          <option value="2~3일">2~3일</option>
+          <option value="4~6일">4~6일</option>
+          <option value="7~15일">7~15일</option>
+          <option value="15일 이상">15일 이상</option>
+        </select>
+        <p class="error-message" id="error-q6"></p>
+      </div>
+
+      <div class="question">
+        <h3>7. 휴가를 함께한 사람은 누구였나요?</h3>
+        <select name="q7" id="q7">
+          <option value="">선택하세요</option>
+          <option value="혼자">혼자</option>
+          <option value="가족">가족</option>
+          <option value="친구">친구</option>
+          <option value="연인">연인</option>
+          <option value="직장 동료">직장 동료</option>
+          <option value="동호회">동호회</option>
+          <option value="기타">기타</option>
+        </select>
+        <p class="error-message" id="error-q7"></p>
+      </div>
+
+      <div class="question">
+        <h3>8. 휴가 지출 비용은 어느 정도였나요?</h3>
+        <select name="q8" id="q8">
+          <option value="">선택하세요</option>
+          <option value="10만 원 이하">10만 원 이하</option>
+          <option value="10만~30만 원">10만~30만 원</option>
+          <option value="30만~50만 원">30만~50만 원</option>
+          <option value="50만~100만 원">50만~100만 원</option>
+          <option value="100만~200만 원">100만~200만 원</option>
+          <option value="200만 원 이상">200만 원 이상</option>
+        </select>
+        <p class="error-message" id="error-q8"></p>
+      </div>
+
+      <div class="question">
+        <h3>9. 이번 휴가에 대한 만족도는?</h3>
+        <select name="q9" id="q9">
+          <option value="">선택하세요</option>
+          <option value="매우 만족">매우 만족</option>
+          <option value="만족">만족</option>
+          <option value="보통">보통</option>
+          <option value="불만족">불만족</option>
+          <option value="매우 불만족">매우 불만족</option>
+        </select>
+        <p class="error-message" id="error-q9"></p>
+      </div>
+
+      <div class="question">
+        <h3>10. 다음 여름휴가에서 하고 싶은 경험은?</h3>
+        <select name="q10" id="q10">
+          <option value="">선택하세요</option>
+          <option value="바다/섬에서 물놀이">바다/섬에서 물놀이</option>
+          <option value="산·계곡에서 활동">산·계곡에서 활동</option>
+          <option value="문화 체험">문화 체험</option>
+          <option value="도시 관광">도시 관광</option>
+          <option value="휴양·힐링">휴양·힐링</option>
+          <option value="맛집 탐방">맛집 탐방</option>
+          <option value="친척·지인 방문">친척·지인 방문</option>
+          <option value="기타">기타</option>
+        </select>
+        <p class="error-message" id="error-q10"></p>
+      </div>
+
+      <button type="submit" class="submit-btn">설문조사 제출</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('q4').addEventListener('change', function () {
+      const q4_1_wrapper = document.getElementById('q4-1-wrapper');
+      if (this.value === '국내') {
+        q4_1_wrapper.style.display = 'block';
+      } else {
+        q4_1_wrapper.style.display = 'none';
+        document.getElementById('q4-1').value = '';
+      }
+    });
+
+    document.getElementById('surveyForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      let allAnswered = true;
+      let firstUnanswered = null;
+
+      for (let i = 1; i <= 10; i++) {
+        const select = document.getElementById(`q${i}`);
+        const errorMsg = document.getElementById(`error-q${i}`);
+        if (select && select.value === "") {
+          allAnswered = false;
+          errorMsg.textContent = `${i}번 질문에 응답해주세요.`;
+          if (!firstUnanswered) firstUnanswered = i;
+        } else {
+          if (errorMsg) errorMsg.textContent = '';
+        }
+      }
+
+      // 4-1 검사
+      const q4 = document.getElementById('q4');
+      const q4_1 = document.getElementById('q4-1');
+      const q4_1_wrapper = document.getElementById('q4-1-wrapper');
+      const error_q4_1 = document.getElementById('error-q4-1');
+
+      if (q4.value === '국내' && q4_1.value === '') {
+        allAnswered = false;
+        error_q4_1.textContent = '4-1번 질문에 응답해주세요.';
+        if (!firstUnanswered) firstUnanswered = '4-1';
+      } else {
+        error_q4_1.textContent = '';
+      }
+
+      if (!allAnswered) {
+        alert(`${firstUnanswered}번 질문부터 응답해주세요.`);
+        document.getElementById(`q${firstUnanswered}`)?.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      alert("설문조사가 완료되었습니다.");
+      window.location.href = "result.html";
+    });
+  </script>
+</body>
+
+</html>
