@@ -95,6 +95,10 @@
     #q4-1-wrapper {
       margin-left: 50px;
     }
+
+    #q4-2-wrapper {
+      margin-left: 50px;
+    }
   </style>
 </head>
 
@@ -175,6 +179,23 @@
           <option value="제주">제주</option>
         </select>
         <p class="error-message" id="error-q4-1"></p>
+      </div>
+
+      <div class="question" id="q4-2-wrapper" style="display: none;">
+        <h3>4-2. 해외 어느 지역에서 보내셧나요?</h3>
+        <select name="q4-2" id="q4-2">
+          <option value="">선택하세요</option>
+          <option value="동아시아">동아시아</option>
+          <option value="동남아시아">동남아시아</option>
+          <option value="서유럽">서유럽</option>
+          <option value="동유럽">동유럽</option>
+          <option value="북미">북미</option>
+          <option value="남미">남미</option>
+          <option value="중동">중동</option>
+          <option value="오세아니아">오세아니아</option>
+          <option value="아프리카">아프리카</option>
+        </select>
+        <p class="error-message" id="error-q4-2"></p>
       </div>
 
       <div class="question">
@@ -269,13 +290,25 @@
   <script>
     document.getElementById('q4').addEventListener('change', function () {
       const q4_1_wrapper = document.getElementById('q4-1-wrapper');
+      const q4_2_wrapper = document.getElementById('q4-2-wrapper');
+
       if (this.value === '국내') {
         q4_1_wrapper.style.display = 'block';
-      } else {
+        q4_2_wrapper.style.display = 'none';
+        document.getElementById('q4-2').value = ''; // 해외 선택값 초기화
+      } else if (this.value === '해외') {
+        q4_2_wrapper.style.display = 'block';
         q4_1_wrapper.style.display = 'none';
+        document.getElementById('q4-1').value = ''; // 국내 선택값 초기화
+      } else {
+        // 선택 안 함
+        q4_1_wrapper.style.display = 'none';
+        q4_2_wrapper.style.display = 'none';
         document.getElementById('q4-1').value = '';
+        document.getElementById('q4-2').value = '';
       }
     });
+
 
     document.getElementById('surveyForm').addEventListener('submit', function (e) {
       e.preventDefault();
