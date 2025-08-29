@@ -1,0 +1,354 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block title %}회원가입 - 여름휴가 설문조사{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-box">
+        <h2>회원가입</h2>
+        
+        <!-- Django 메시지 표시 -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="message {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        
+        <form id="registerForm" method="post" novalidate>
+            {% csrf_token %}
+            
+            <!-- 이름 -->
+            <div class="form-group">
+                <label for="id_first_name">이름</label>
+                <input type="text" 
+                       id="id_first_name" 
+                       name="first_name" 
+                       required 
+                       placeholder="이름을 입력하세요"
+                       value="{{ form.first_name.value|default:'' }}" />
+                <p id="name-error" class="error-message">
+                    {% if form.first_name.errors %}
+                        {{ form.first_name.errors.0 }}
+                    {% endif %}
+                </p>
+            </div>
+
+            <!-- 아이디 + 중복체크 -->
+            <div class="form-group" style="position: relative;">
+                <label for="id_username">아이디</label>
+                <div class="id-check-group">
+                    <input type="text" 
+                           id="id_username" 
+                           name="username" 
+                           required 
+                           placeholder="아이디를 입력하세요"
+                           value="{{ form.username.value|default:'' }}" />
+                    {% comment %} <button type="button" id="checkUserIdBtn">중복체크</button> {% endcomment %}
+                </div>
+                <p id="userid-error" class="error-message">
+                    {% if form.username.errors %}
+                        {{ form.username.errors.0 }}
+                    {% endif %}
+                </p>
+                <p id="idStatus"></p>
+            </div>
+
+            <!-- 비밀번호 -->
+            <div class="form-group">
+                <label for="id_password1">비밀번호</label>
+                <input type="password" 
+                       id="id_password1" 
+                       name="password1" 
+                       required 
+                       placeholder="비밀번호를 입력하세요" />
+                <p id="password-error" class="error-message">
+                    {% if form.password1.errors %}
+                        {{ form.password1.errors.0 }}
+                    {% endif %}
+                </p>
+            </div>
+
+            <!-- 비밀번호 확인 -->
+            <div class="form-group">
+                <label for="id_password2">비밀번호 확인</label>
+                <input type="password" 
+                       id="id_password2" 
+                       name="password2" 
+                       required 
+                       placeholder="비밀번호를 입력하세요" />
+                <p id="password2-error" class="error-message">
+                    {% if form.password2.errors %}
+                        {{ form.password2.errors.0 }}
+                    {% endif %}
+                </p>
+            </div>
+
+            <!-- 나이 -->
+            <div class="form-group">
+                <label for="id_age">나이</label>
+                <input type="number" 
+                       id="id_age" 
+                       name="age" 
+                       required 
+                       placeholder="나이를 입력하세요"
+                       min="10" 
+                       max="100"
+                       value="{{ form.age.value|default:'' }}" />
+                <p id="age-error" class="error-message">
+                    {% if form.age.errors %}
+                        {{ form.age.errors.0 }}
+                    {% endif %}
+                </p>
+            </div>
+
+            <!-- 이메일 -->
+            <div class="form-group">
+                <label for="id_email">이메일</label>
+                <input type="email" 
+                       id="id_email" 
+                       name="email" 
+                       required 
+                       placeholder="이메일을 입력하세요"
+                       value="{{ form.email.value|default:'' }}" />
+                <p id="email-error" class="error-message">
+                    {% if form.email.errors %}
+                        {{ form.email.errors.0 }}
+                    {% endif %}
+                </p>
+            </div>
+
+            <button type="submit" class="submit-btn">회원가입</button>
+        </form>
+        
+        <p class="form-footer">
+            이미 계정이 있나요? <a href="{% url 'accounts:login' %}">로그인</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
+<script>
+let idAvailable = false;
+
+function checkUserId() {
+    const username = document.getElementById("id_username").value.trim();
+    
+    if (!username) {
+        showIdStatus("아이디를 입력하세요.", true);
+        return;
+    }
+
+    // Django AJAX 아이디 중복체크
+    fetch("{% url 'accounts:check_username' %}", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        },
+        body: JSON.stringify({username: username})
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        if (data.available) {
+            idAvailable = true;
+            showIdStatus("사용 가능한 아이디입니다.", false);
+        } else {
+            idAvailable = false;
+            showIdStatus("이미 사용 중인 아이디입니다.", true);
+        }
+    })
+    .catch(() => {
+        idAvailable = false;
+        showIdStatus("아이디 중복 체크에 실패했습니다. 다시 시도해주세요.", true);
+    });
+}
+
+function showIdStatus(message, isError = true) {
+    const status = document.getElementById("idStatus");
+    status.innerText = message;
+    status.style.color = isError ? "red" : "green";
+    if (message) {
+        status.classList.add("visible");
+    } else {
+        status.classList.remove("visible");
+    }
+}
+
+function showError(inputId, message) {
+    const errorEl = document.getElementById(inputId + "-error");
+    errorEl.textContent = message;
+    if (message) {
+        errorEl.classList.add("visible");
+    } else {
+        errorEl.classList.remove("visible");
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 이름 입력 필터링 + 에러 메시지 지우기 한 번만 등록
+    const nameInput = document.getElementById('id_first_name');
+    nameInput.addEventListener('input', () => {
+        const value = nameInput.value;
+        const invalid = /[^\uAC00-\uD7A3]/.test(value);
+
+        if (value === '') {
+            showError('name', '');
+        } else if (invalid) {
+            showError('name', '한글만 입력 가능합니다')
+        } else {
+            showError('name', '');
+        }
+    });
+
+    // 중복체크 버튼 이벤트 리스너 등록
+    const checkBtn = document.getElementById('checkUserIdBtn');
+    if (checkBtn) {
+        checkBtn.addEventListener('click', checkUserId);
+    }
+
+    // 아이디 입력 필터링
+    const useridInput = document.getElementById('id_username');
+    useridInput.addEventListener('input', () => {
+        if (/[가-힣]/.test(useridInput.value)) {
+            showError('userid', '아이디에는 한글을 사용할 수 없습니다.');
+        } else {
+            showError('userid', '');
+        }
+        showIdStatus('');
+        idAvailable = false;
+    });
+
+    // 비밀번호 Caps Lock 경고
+    const passwordInput = document.getElementById('id_password1');
+    let capsLockTooltip = null;
+
+    passwordInput.addEventListener('keyup', (e) => {
+        if (e.getModifierState && e.getModifierState('CapsLock')) {
+            if (!capsLockTooltip) {
+                const rect = passwordInput.getBoundingClientRect();
+
+                capsLockTooltip = document.createElement('div');
+                capsLockTooltip.textContent = 'Caps Lock이 켜져 있습니다!';
+                capsLockTooltip.style.position = 'absolute';
+                capsLockTooltip.style.color = 'red';
+                capsLockTooltip.style.background = 'lightyellow';
+                capsLockTooltip.style.border = '1px solid red';
+                capsLockTooltip.style.padding = '5px';
+                capsLockTooltip.style.borderRadius = '5px';
+                capsLockTooltip.style.top = passwordInput.offsetTop - 30 + 'px';
+                capsLockTooltip.style.left = passwordInput.offsetLeft + 'px';
+                capsLockTooltip.classList.add('caps-tooltip');
+                passwordInput.parentElement.appendChild(capsLockTooltip);
+            }
+        } else {
+            if (capsLockTooltip) {
+                capsLockTooltip.remove();
+                capsLockTooltip = null;
+            }
+        }
+        showError('password', '');  // 입력 시 에러 메시지 제거
+    });
+
+    passwordInput.addEventListener('blur', () => {
+        if (capsLockTooltip) {
+            capsLockTooltip.remove();
+            capsLockTooltip = null;
+        }
+    })
+
+    // 비밀번호 확인 Caps Lock 경고
+    const password2Input = document.getElementById('id_password2');
+    let capsLockTooltip2 = null;
+
+    password2Input.addEventListener('keyup', (e) => {
+        if (e.getModifierState && e.getModifierState('CapsLock')) {
+            if (!capsLockTooltip2) {
+                const rect = password2Input.getBoundingClientRect();
+
+                capsLockTooltip2 = document.createElement('div');
+                capsLockTooltip2.textContent = 'Caps Lock이 켜져 있습니다!';
+                capsLockTooltip2.style.position = 'absolute';
+                capsLockTooltip2.style.color = 'red';
+                capsLockTooltip2.style.background = 'lightyellow';
+                capsLockTooltip2.style.border = '1px solid red';
+                capsLockTooltip2.style.padding = '5px';
+                capsLockTooltip2.style.borderRadius = '5px';
+                capsLockTooltip2.style.top = password2Input.offsetTop - 30 + 'px';
+                capsLockTooltip2.style.left = password2Input.offsetLeft + 'px';
+                capsLockTooltip2.classList.add('caps-tooltip');
+                password2Input.parentElement.appendChild(capsLockTooltip2);
+            }
+        } else {
+            if (capsLockTooltip2) {
+                capsLockTooltip2.remove();
+                capsLockTooltip2 = null;
+            }
+        }
+        showError('password2', '');  // 입력 시 에러 메시지 제거
+    });
+
+    password2Input.addEventListener('blur', () => {
+        if (capsLockTooltip2) {
+            capsLockTooltip2.remove();
+            capsLockTooltip2 = null;
+        }
+    })
+
+    // 나이 입력 필터링
+    const ageInput = document.getElementById('id_age');
+    ageInput.addEventListener('input', () => {
+        ageInput.value = ageInput.value.replace(/[^0-9]/g, '');
+        showError('age', '');
+    });
+
+    // 이메일 입력 필터링
+    const emailInput = document.getElementById('id_email');
+    emailInput.addEventListener('input', () => {
+        emailInput.value = emailInput.value.replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '');
+        showError('email', '');
+    });
+});
+
+// 프론트엔드 유효성 검사 (원본 로직 완전 보존)
+document.getElementById("registerForm").addEventListener("submit", function (e) {
+    // 모든 에러 초기화
+    ["name", "userid", "password", "password2", "age", "email"].forEach(id => showError(id, ''));
+    showIdStatus('');
+
+    const name = document.getElementById("id_first_name").value.trim();
+    const userid = document.getElementById("id_username").value.trim();
+    const password = document.getElementById("id_password1").value.trim();
+    const password2 = document.getElementById("id_password2").value.trim();
+    const age = document.getElementById("id_age").value.trim();
+    const email = document.getElementById("id_email").value.trim();
+
+    let hasError = false;
+
+    // 이름 검사
+    if (!name) {
+        showError("name", "이름을 입력해주세요.");
+        document.getElementById("id_first_name").focus();
+        hasError = true;
+    } else if (!/^[가-힣]+$/.test(name)) {
+        showError("name", "이름은 한글만 입력 가능합니다.");
+        document.getElementById("id_first_name").focus();
+        hasError = true;
+    }
+
+    // 아이디 검사
+    if (!userid) {
+        showError("userid", "아이디를 입력해주세요.");
+        document.getElementById("id_username").focus();
+        hasError = true;
+    } else if (/[가-힣]/.test(userid)) {
+        showError("userid", "아이디에는 한글을 사용할 수 없습니다.");
+        document.getElementById("id_username").focus();
+        hasError = true;
+    } else if (!idAvailable) {
+        showError("userid", "아이디 중복체크를 해주세요.");
+        document.getElementById("id_username").focus();
+        hasError = true;
+    }
+
+    // 비밀번호 검사
+    if (!password) {

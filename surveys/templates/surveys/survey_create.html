@@ -1,0 +1,284 @@
+<!-- surveys/templates/surveys/survey_create.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>설문조사 작성 - 여름휴가 설문조사</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #34495e;
+            font-size: 16px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .form-control:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .message {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .location-fields {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .field-error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .existing-survey {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #ffeaa7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏖️ 여름휴가 설문조사</h1>
+            <div class="nav">
+                안녕하세요, {{ user.username }}님!
+                <a href="{% url 'accounts:profile' %}">프로필</a> |
+                <a href="{% url 'surveys:list' %}">내 설문목록</a> |
+                <a href="{% url 'accounts:logout' %}">로그아웃</a>
+            </div>
+        </div>
+
+        <!-- 메시지 표시 -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="message {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+
+        <!-- 기존 설문조사가 있는 경우 알림 -->
+        {% if existing_survey %}
+            <div class="existing-survey">
+                ⚠️ 이미 설문조사를 작성하셨습니다 ({{ existing_survey.created_at|date:"Y년 m월 d일" }}). 
+                새로 작성하시면 기존 설문이 업데이트됩니다.
+            </div>
+        {% endif %}
+
+        <h2>가장 최근에 갔던 여름 휴가에 대해 알려주세요!</h2>
+        
+        <form method="post">
+            {% csrf_token %}
+            
+            <!-- 1. 연령대 -->
+            <div class="form-group">
+                <label>{{ form.age_group.label }}</label>
+                {{ form.age_group }}
+                {% if form.age_group.errors %}
+                    <div class="field-error">{{ form.age_group.errors }}</div>
+                {% endif %}
+            </div>
+
+            <!-- 2. 성별 -->
+            <div class="form-group">
+                <label>{{ form.gender.label }}</label>
+                {{ form.gender }}
+                {% if form.gender.errors %}
+                    <div class="field-error">{{ form.gender.errors }}</div>
+                {% endif %}
+            </div>
+
+            <!-- 3. 휴가 유형 -->
+            <div class="form-group">
+                <label>{{ form.vacation_type.label }}</label>
+                {{ form.vacation_type }}
+                {% if form.vacation_type.errors %}
+                    <div class="field-error">{{ form.vacation_type.errors }}</div>
+                {% endif %}
+            </div>
+
+            <!-- 4. 휴가 장소 -->
+            <div class="form-group">
+                <label>{{ form.location_type.label }}</label>
+                {{ form.location_type }}
+                {% if form.location_type.errors %}
+                    <div class="field-error">{{ form.location_type.errors }}</div>
+                {% endif %}
+                
+                <!-- 국내/해외 세부 지역 선택 -->
+                <div class="location-fields">
+                    <div class="form-group">
+                        <label>{{ form.domestic_location.label }}</label>
+                        {{ form.domestic_location }}
+                        {% if form.domestic_location.errors %}
+                            <div class="field-error">{{ form.domestic_location.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>{{ form.overseas_location.label }}</label>
+                        {{ form.overseas_location }}
+                        {% if form.overseas_location.errors %}
+                            <div class="field-error">{{ form.overseas_location.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. 교통수단 -->
+            <div class="form-group">
+                <label>{{ form.transportation.label }}</label>
+                {{ form.transportation }}
+                {% if form.transportation.errors %}
+                    <div class="field-error">{{ form.transportation.errors }}</div>
+                {% endif %}
+            </div>
+
+            <!-- 6. 휴가 기간 -->
+            <div class="form-group">
+                <label>{{ form.duration.label }}</label>
+                {{ form.duration }}
+                {% if form.duration.errors %}
+                    <div class="field-error">{{ form.duration.errors }}</div>
+                {% endif %}
+            </div>
+
+            <!-- 7. 동행자 -->
+            <div class="form-group">
+                <label>{{ form.companion.label }}</label>
+                {{ form.companion }}
+                {% if form.companion.errors %}
+                    <div class="field-error">{{ form.companion.errors }}</div>
+                {% endif %}
+            </div>
+
+            <!-- 8. 총 비용 -->
+            <div class="form-group">
+                <label>{{ form.cost.label }}</label>
+                {{ form.cost }}
+                {% if form.cost.errors %}
+                    <div class="field-error">{{ form.cost.errors }}</div>
+                {% endif %}
+            </div>
+
+            <!-- 9. 만족도 -->
+            <div class="form-group">
+                <label>{{ form.satisfaction.label }}</label>
+                {{ form.satisfaction }}
+                {% if form.satisfaction.errors %}
+                    <div class="field-error">{{ form.satisfaction.errors }}</div>
+                {% endif %}
+            </div>
+
+            <!-- 10. 다음 휴가 희망 -->
+            <div class="form-group">
+                <label>{{ form.next_vacation_type.label }}</label>
+                {{ form.next_vacation_type }}
+                {% if form.next_vacation_type.errors %}
+                    <div class="field-error">{{ form.next_vacation_type.errors }}</div>
+                {% endif %}
+            </div>
+
+            <button type="submit" class="btn">설문조사 제출하기</button>
+        </form>
+    </div>
+
+    <script>
+        // 국내/해외 선택에 따라 세부 지역 선택 필드 보이기/숨기기
+        document.addEventListener('DOMContentLoaded', function() {
+            const locationTypeField = document.querySelector('.location-type');
+            const domesticField = document.querySelector('.domestic-location');
+            const overseasField = document.querySelector('.overseas-location');
+            
+            function toggleLocationFields() {
+                const selectedValue = locationTypeField.value;
+                
+                if (selectedValue === 'domestic') {
+                    domesticField.style.display = 'block';
+                    overseasField.style.display = 'none';
+                    overseasField.value = '';  // 해외 필드 값 초기화
+                } else if (selectedValue === 'overseas') {
+                    domesticField.style.display = 'none';
+                    overseasField.style.display = 'block';
+                    domesticField.value = '';  // 국내 필드 값 초기화
+                } else {
+                    domesticField.style.display = 'none';
+                    overseasField.style.display = 'none';
+                }
+            }
+            
+            // 페이지 로드 시 초기 상태 설정
+            toggleLocationFields();
+            
+            // 국내/해외 선택이 변경될 때마다 실행
+            locationTypeField.addEventListener('change', toggleLocationFields);
+        });
+    </script>
+</body>
+</html>

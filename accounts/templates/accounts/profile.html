@@ -1,0 +1,28 @@
+<!-- accounts/templates/accounts/profile.html -->
+{% extends 'accounts/base.html' %}
+
+{% block title %}프로필{% endblock %}
+
+{% block content %}
+<h2>내 프로필</h2>
+
+<div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px;">
+    <p><strong>사용자명:</strong> {{ user.username }}</p>
+    <p><strong>이메일:</strong> {{ user.email }}</p>
+    <p><strong>나이대:</strong> {{ user.get_age_group_display }}</p>
+    <p><strong>가입일:</strong> {{ user.created_at|date:"Y년 m월 d일" }}</p>
+</div>
+
+<div style="margin-top: 30px;">
+    <h3>🏖️ 설문조사</h3>
+    <p>
+        <a href="{% url 'surveys:create' %}" class="btn" style="display: inline-block; margin-right: 10px;">
+            설문조사 작성하기
+        </a>
+        <a href="{% url 'surveys:results' %}" class="btn" style="display: inline-block; background-color: #27ae60;">
+            설문조사 결과 보기
+        </a>
+    </p>
+</div>
+
+{% endblock %}

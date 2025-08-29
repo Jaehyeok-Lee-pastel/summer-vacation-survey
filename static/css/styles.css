@@ -1,0 +1,221 @@
+/* 화면 전체를 꽉 채우고, 배경은 흐리게 처리 가능 */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: url('/static/images/summer.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* auth-container를 화면 가운데 위치 */
+.auth-container {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  padding: 20px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+/* 박스 높이 고정 */
+.auth-box {
+    min-height: 420px;
+}
+
+/* 제목 */
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 28px;
+  color: #333;
+}
+
+/* 폼 그룹 */
+.form-group {
+  margin-bottom: 14px;
+  position: relative;
+}
+
+/* 레이블 */
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+/* 입력창 */
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* 아이디 + 중복체크 */
+.id-check-group {
+  display: flex;
+  gap: 10px;
+}
+
+.id-check-group input {
+  flex: 1;
+}
+
+.id-check-group button {
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.id-check-group button:hover {
+  background: #0056b3;
+}
+
+/* 에러 메시지 고정 높이 */
+.error-placeholder {
+    height: 20px;
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* 아이디 중복 상태 메시지 */
+#idStatus {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 폼 제출 버튼 */
+.submit-btn {
+  width: 100%;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 14px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* 폼 하단 문구 */
+.form-footer {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #666;
+}
+
+.form-footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Django 메시지 스타일 */
+.message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.message.info {
+  background-color: #cce7ff;
+  color: #004085;
+  border: 1px solid #99d1ff;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+  .auth-container {
+    width: 90%;
+    padding: 15px;
+  }
+  
+  .auth-box {
+    min-height: auto;
+  }
+  
+  .auth-box h2 {
+    font-size: 24px;
+  }
+  
+  .id-check-group {
+    flex-direction: column;
+  }
+  
+  .id-check-group input,
+  .id-check-group button {
+    width: 100%;
+  }
+}
+
+/* 기존 styles.css 내용은 그대로 유지하고 아래 내용 추가 */
+
+/* 프론트엔드 에러 메시지 스타일 (원본과 동일) */
+.error-message {
+  display: none;
+  color: #ff4d4f;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.error-message.visible {
+  display: block;
+}
+
+/* Caps Lock 툴팁 스타일 */
+.caps-tooltip {
+  z-index: 1000;
+  font-size: 12px;
+}

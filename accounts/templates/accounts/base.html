@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}여름휴가 설문조사{% endblock %}</title>
+    
+    <!-- ✅ Django static 파일 로드 -->
+    {% load static %}
+    
+    <!-- Google Fonts 추가 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- ✅ CSS 파일 로드 -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
