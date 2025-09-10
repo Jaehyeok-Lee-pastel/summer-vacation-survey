@@ -1,0 +1,168 @@
+ 
+/* 화면 전체를 꽉 채우고, 배경은 흐리게 처리 가능 */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: url('../images/summer.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* auth-container를 화면 가운데 위치 */
+.auth-container {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  padding: 20px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+/* 제목 */
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 28px;
+  color: #333;
+}
+
+/* 폼 그룹 */
+.form-group {
+  margin-bottom: 14px;
+  position: relative;
+}
+
+/* 레이블 */
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+/* 입력창 */
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* 아이디 + 중복체크 */
+.id-check-group {
+  display: flex;
+  gap: 10px;
+}
+
+.id-check-group input {
+  flex: 1;
+}
+
+.id-check-group button {
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.id-check-group button:hover {
+  background: #0056b3;
+}
+
+/* 에러 메시지 말풍선 스타일 */
+.error-message {
+  display: none;
+  position: absolute;
+  bottom: -32px;
+  left: 10px;
+  background: #ff4d4f;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+/* 화살표 말풍선 */
+.error-message::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 12px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #ff4d4f transparent;
+}
+
+/* visible 클래스가 붙으면 보이도록 */
+.error-message.visible {
+  display: inline-block;
+}
+
+/* 아이디 중복 상태 메시지 */
+#idStatus {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 폼 제출 버튼 */
+.submit-btn {
+  width: 100%;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 14px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* 폼 하단 문구 */
+.form-footer {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #666;
+}
+
+.form-footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}

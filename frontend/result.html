@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>설문조사 결과</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        background-color: #f4f4f4;
+        font-family: "Noto Sans KR", sans-serif;
+        color: #333;
+        margin: 0;
+      }
+
+      .results-container {
+        max-width: 1080px;
+        margin: 40px auto 80px;
+        padding: 0 20px;
+      }
+
+      .results-container h1 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 2rem;
+        color: #2c3e50;
+      }
+
+      .chart-box {
+        background-color: #ffffff;
+        padding: 20px 36px 100px 28px;
+        /* 위쪽 패딩 줄임 */
+        margin-bottom: 160px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .chart-box h2 {
+        margin-top: 0;
+        /* 제목 위쪽 여백 없앰 */
+        margin-bottom: 10px;
+        /* 제목 아래 여백 */
+        font-size: 1.3rem;
+        color: #444;
+      }
+
+      canvas {
+        width: 100% !important;
+        height: 400px !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="results-container">
+      <h1>여름휴가 설문조사 결과</h1>
+
+      <div class="chart-box">
+        <h2>연령대별 선호하는 활동 & 여행지</h2>
+        <canvas id="recentVacationChart"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <h2>남성의 연령대별 선호 활동</h2>
+        <div class="chart-subtitle" id="maleSubtitle"></div>
+        <canvas id="maleChart"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <h2>여성의 연령대별 선호 활동</h2>
+        <div class="chart-subtitle" id="femaleSubtitle"></div>
+        <canvas id="femaleChart"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <h2>연령대별 함께한 사람</h2>
+        <div class="chart-subtitle" id="companionSubtitle"></div>
+        <canvas id="companionChart"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <h2>연령대별 희망하는 다음 여름휴가</h2>
+        <div class="chart-subtitle" id="nextVacationSubtitle"></div>
+        <canvas id="nextVacationChart"></canvas>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    async function drawRecentVacationChart() {
+      const res = await fetch(
+        "https://dt5857.pythonanywhere.com/api/data/recent-vacation-ratio_all/"
+      );
+      const json = await res.json();
+      console.log(json); // 확인용 로그
+
+      const colors = [
+        "#3498db",
+        "#e74c3c",
+        "#2ecc71",
+        "#9b59b6",
+        "#f1c40f",
+        "#1abc9c",
+        "#e67e22",
+        "#34495e",
+      ];
+      json.datasets.forEach((ds, i) => {
+        ds.backgroundColor = colors[i % colors.length];
+      });
+
+      const ctx = document
+        .getElementById("recentVacationChart")
+        .getContext("2d");
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: json.labels,
+          datasets: json.datasets,
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              ticks: { callback: (value) => value + "%" },
+            },
+          },
+          plugins: {
+            legend: { position: "right" },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y}%`,
+              },
+            },
+          },
+        },
+      });
+    }
+
+    async function drawMaleBarChart() {
+      try {
+        const res = await fetch(
+          "https://dt5857.pythonanywhere.com/api/data/vacation_male_only/"
+        );
+        const json = await res.json();
+        console.log("Male Chart Data:", json);
+
+        // 부제목 업데이트
+        if (json.meta && json.meta.total_by_age) {
+          const totalResponses = json.meta.total_male_responses || 0;
+          const ageDistribution = Object.entries(json.meta.total_by_age)
+            .filter(([age, count]) => count > 0)
+            .map(([age, count]) => `${age}: ${count}명`)
+            .join(", ");
+
+          document.getElementById("maleSubtitle");
+        }
+
+        const colors = [
+          "#3498db",
+          "#e74c3c",
+          "#2ecc71",
+          "#9b59b6",
+          "#f1c40f",
+          "#1abc9c",
+          "#e67e22",
+          "#34495e",
+        ];
+
+        // 색상 적용
+        json.datasets.forEach((ds, i) => {
+          ds.backgroundColor = colors[i % colors.length];
+        });
+
+        const ctx = document.getElementById("maleChart").getContext("2d");
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: json.labels,
+            datasets: json.datasets,
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100,
+                ticks: { callback: (value) => value + "%" },
+              },
+            },
+            plugins: {
+              legend: { position: "right" },
+              tooltip: {
+                callbacks: {
+                  label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y}%`,
+                },
+              },
+            },
+          },
+        });
+      } catch (error) {
+        console.error("Male chart error:", error);
+        document.getElementById("maleSubtitle").textContent = "차트 로드 실패";
+      }
+    }
+
+    async function drawFemaleBarChart() {
+      try {
+        const res = await fetch(
+          "https://dt5857.pythonanywhere.com/api/data/vacation_female_only/"
+        );
+        const json = await res.json();
+        console.log("Female Chart Data:", json);
+
+        // 부제목 업데이트
+        if (json.meta && json.meta.total_by_age) {
+          const totalResponses = json.meta.total_female_responses || 0;
+          const ageDistribution = Object.entries(json.meta.total_by_age)
+            .filter(([age, count]) => count > 0)
+            .map(([age, count]) => `${age}: ${count}명`)
+            .join(", ");
+
+          document.getElementById("femaleSubtitle");
+        }
+
+        const colors = [
+          "#3498db",
+          "#e74c3c",
+          "#2ecc71",
+          "#9b59b6",
+          "#f1c40f",
+          "#1abc9c",
+          "#e67e22",
+          "#34495e",
+        ];
+
+        // 색상 적용
+        json.datasets.forEach((ds, i) => {
+          ds.backgroundColor = colors[i % colors.length];
+        });
+
+        const ctx = document.getElementById("femaleChart").getContext("2d");
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: json.labels,
+            datasets: json.datasets,
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100,
+                ticks: { callback: (value) => value + "%" },
+              },
+            },
+            plugins: {
+              legend: { position: "right" },
+              tooltip: {
+                callbacks: {
+                  label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y}%`,
+                },
+              },
+            },
+          },
+        });
+      } catch (error) {
+        console.error("Female chart error:", error);
+        document.getElementById("femaleSubtitle").textContent =
+          "차트 로드 실패";
+      }
+    }
+
+    async function drawCompanionByAgeChart() {
+      try {
+        const res = await fetch(
+          "https://dt5857.pythonanywhere.com/api/data/companion_by_age/"
+        );
+        const json = await res.json();
+        console.log("Companion by Age Chart Data:", json);
+
+        const colors = [
+          "#3498db",
+          "#e74c3c",
+          "#2ecc71",
+          "#9b59b6",
+          "#f1c40f",
+          "#1abc9c",
+          "#e67e22",
+          "#34495e",
+        ];
+
+        // 색상 적용
+        json.datasets.forEach((ds, i) => {
+          ds.backgroundColor = colors[i % colors.length];
+        });
+
+        const ctx = document.getElementById("companionChart").getContext("2d");
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: json.labels,
+            datasets: json.datasets,
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100,
+                ticks: { callback: (value) => value + "%" },
+              },
+            },
+            plugins: {
+              legend: { position: "right" },
+              tooltip: {
+                callbacks: {
+                  label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y}%`,
+                },
+              },
+            },
+          },
+        });
+      } catch (error) {
+        console.error("Companion chart error:", error);
+        document.getElementById("companionSubtitle").textContent =
+          "차트 로드 실패";
+      }
+    }
+
+    async function drawNextVacationByAgeChart() {
+      try {
+        const res = await fetch(
+          "https://dt5857.pythonanywhere.com/api/data/next_vacation_by_age/"
+        );
+        const json = await res.json();
+        console.log("Next Vacation by Age Chart Data:", json);
+
+        // 부제목 업데이트
+        if (json.meta && json.meta.total_by_age) {
+          const totalResponses = json.meta.total_responses || 0;
+          const ageDistribution = Object.entries(json.meta.total_by_age)
+            .filter(([age, count]) => count > 0)
+            .map(([age, count]) => `${age}: ${count}명`)
+            .join(", ");
+        }
+
+        const colors = [
+          "#3498db",
+          "#e74c3c",
+          "#2ecc71",
+          "#9b59b6",
+          "#f1c40f",
+          "#1abc9c",
+          "#e67e22",
+          "#34495e",
+        ];
+
+        // 색상 적용
+        json.datasets.forEach((ds, i) => {
+          ds.backgroundColor = colors[i % colors.length];
+        });
+
+        const ctx = document
+          .getElementById("nextVacationChart")
+          .getContext("2d");
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: json.labels,
+            datasets: json.datasets,
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100,
+                ticks: { callback: (value) => value + "%" },
+              },
+            },
+            plugins: {
+              legend: { position: "right" },
+              tooltip: {
+                callbacks: {
+                  label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y}%`,
+                },
+              },
+            },
+          },
+        });
+      } catch (error) {
+        console.error("Next Vacation chart error:", error);
+        document.getElementById("nextVacationSubtitle").textContent =
+          "차트 로드 실패";
+      }
+    }
+
+    drawRecentVacationChart();
+    drawMaleBarChart();
+    drawFemaleBarChart();
+    drawCompanionByAgeChart();
+    drawNextVacationByAgeChart()
+  </script>
+</html>

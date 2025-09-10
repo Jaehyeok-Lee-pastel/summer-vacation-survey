@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 맞춤 여름휴가 추천</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
+
+        body {
+            background: url("images/summer.png") no-repeat center center fixed;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .recommendation-container {
+            width: 95%;
+            max-width: 1400px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .header h1 {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .loading-subtext {
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        .error-container {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .error-container h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .user-info {
+            background: linear-gradient(135deg, #f8f9ff, #e3f2fd);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #667eea;
+        }
+
+        .user-info h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .user-data {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .user-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 3px solid #667eea;
+        }
+
+        .user-label {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .user-value {
+            color: #666;
+            font-size: 1em;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .status-success {
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            color: white;
+        }
+
+        .status-warning {
+            background: linear-gradient(135deg, #ff9800, #f57c00);
+            color: white;
+        }
+
+        .recommendations-section {
+            margin: 40px 0;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .recommendation-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recommendation-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .recommendation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .card-rank {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .vacation-type {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+
+        .location-info {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            padding: 15px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+
+        .location-type {
+            color: #2e7d32;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .recommended-location {
+            color: #1b5e20;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .stat-item {
+            flex: 1;
+            min-width: 100px;
+            text-align: center;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .stat-value {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .confidence-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .confidence-fill {
+            height: 100%;
+            background: linear-gradient(45deg, #4caf50, #66bb6a);
+            border-radius: 4px;
+            transition: width 0.8s ease;
+        }
+
+        .similar-users {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .similar-users h3 {
+            color: #e65100;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .similar-user-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .similarity-score {
+            background: linear-gradient(45deg, #ff9800, #f57c00);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9em;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .user-details {
+            flex: 1;
+        }
+
+        .user-vacation {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .user-meta {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .action-buttons {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(45deg, #95a5a6, #7f8c8d);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(149, 165, 166, 0.4);
+        }
+
+        .no-recommendations {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .no-recommendations-icon {
+            font-size: 4em;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .recommendation-container {
+                width: 98%;
+                padding: 20px;
+                margin: 10px auto;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .recommendations-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .stats-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="recommendation-container">
+        <div class="header">
+            <h1>AI 맞춤 여름휴가 추천</h1>
+            <div class="subtitle">당신만을 위한 특별한 여행지를 찾아드립니다</div>
+        </div>
+
+        <!-- 로딩 화면 -->
+        <div id="loading" class="loading">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">AI가 맞춤 추천을 생성하고 있습니다</div>
+            <div class="loading-subtext">잠시만 기다려주세요...</div>
+        </div>
+
+        <!-- 메인 콘텐츠 -->
+        <div id="content" style="display: none;">
+            <!-- 사용자 정보 -->
+            <div id="userInfo" class="user-info">
+                <h3>입력하신 여행 정보</h3>
+                <div id="userData" class="user-data">
+                    <!-- JavaScript로 동적 생성 -->
+                </div>
+            </div>
+
+            <!-- 상태 표시 -->
+            <div id="statusBadge" class="status-badge status-success">
+                AI 추천 시스템 활성화
+            </div>
+
+            <!-- 추천 결과 -->
+            <div id="recommendationsSection" class="recommendations-section">
+                <h2 class="section-title">AI 추천 결과</h2>
+                <div id="recommendationsGrid" class="recommendations-grid">
+                    <!-- JavaScript로 동적 생성 -->
+                </div>
+            </div>
+
+            <!-- 비슷한 사용자들 -->
+            <div id="similarUsersSection" class="similar-users" style="display: none;">
+                <h3>비슷한 성향의 사용자들</h3>
+                <div id="similarUsersList">
+                    <!-- JavaScript로 동적 생성 -->
+                </div>
+            </div>
+
+            <!-- 액션 버튼 -->
+            <div class="action-buttons">
+                <a href="survey.html" class="btn btn-primary">새 설문조사 하기</a>
+                <a href="result.html" class="btn btn-secondary">전체 통계 보기</a>
+            </div>
+        </div>
+
+        <!-- 오류 화면 -->
+        <div id="errorContainer" class="error-container" style="display: none;">
+            <h3>추천 생성 실패</h3>
+            <p id="errorMessage"></p>
+            <div class="action-buttons">
+                <a href="survey.html" class="btn btn-primary">설문조사 하러 가기</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 페이지 로드 시 API 호출
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchRecommendations();
+        });
+
+        function fetchRecommendations() {
+            console.log('API 호출 시작...');
+
+            // 테스트 데이터 - 실제로는 설문조사에서 받은 데이터 사용
+            const surveyData = {
+                "q1": "20대",
+                "q2": "여성",
+                "q3": "해수욕, 물놀이", 
+                "q4": "국내",
+                "q5": "자동차",
+                "q6": "4~6일",
+                "q7": "친구",
+                "q8": "50만~100만 원",
+                "q9": 5,
+                "q10": "바다/섬에서 물놀이"
+            };
+
+            fetch('http://127.0.0.1:8000/api/data/survey-and-recommendations/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(surveyData)
+            })
+            .then(response => {
+                console.log('응답 상태:', response.status);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('응답 데이터:', data);
+                hideLoading();
+                
+                if (data.success) {
+                    displayRecommendations(data, surveyData);
+                } else {
+                    displayError(data.error || '추천 생성에 실패했습니다.');
+                }
+            })
+            .catch(error => {
+                console.error('API 호출 에러:', error);
+                hideLoading();
+                
+                let errorMessage = '서버와 연결할 수 없습니다.';
+                if (error.message.includes('NetworkError')) {
+                    errorMessage = 'Django 서버가 실행 중인지 확인해주세요.';
+                }
+                
+                displayError(errorMessage);
+            });
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
+
+        function displayRecommendations(data, surveyData) {
+            document.getElementById('content').style.display = 'block';
+            
+            // 사용자 정보 표시
+            displayUserInfo(surveyData);
+            
+            // 추천 결과 표시
+            displayRecommendationCards(data.recommendations);
+            
+            // 비슷한 사용자들 표시
+            if (data.similar_users && data.similar_users.length > 0) {
+                displaySimilarUsers(data.similar_users);
+            }
+        }
+
+        function displayUserInfo(surveyData) {
+            const userData = document.getElementById('userData');
+            
+            const userItems = [
+                { label: '연령대', value: surveyData.q1 },
+                { label: '성별', value: surveyData.q2 },
+                { label: '최근 휴가', value: surveyData.q3 },
+                { label: '선호 지역', value: surveyData.q4 },
+                { label: '교통수단', value: surveyData.q5 },
+                { label: '여행 기간', value: surveyData.q6 },
+                { label: '동행자', value: surveyData.q7 },
+                { label: '예산', value: surveyData.q8 }
+            ];
+
+            userItems.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'user-item';
+                div.innerHTML = `
+                    <div class="user-label">${item.label}</div>
+                    <div class="user-value">${item.value}</div>
+                `;
+                userData.appendChild(div);
+            });
+        }
+
+        function displayRecommendationCards(recommendations) {
+            const grid = document.getElementById('recommendationsGrid');
+            
+            if (!recommendations || recommendations.length === 0) {
+                grid.innerHTML = `
+                    <div class="no-recommendations">
+                        <div class="no-recommendations-icon">🏖️</div>
+                        <h3>추천 결과가 없습니다</h3>
+                        <p>더 많은 데이터가 필요합니다. 다른 설문을 시도해보세요.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            recommendations.forEach((rec, index) => {
+                const card = document.createElement('div');
+                card.className = 'recommendation-card';
+                
+                card.innerHTML = `
+                    <div class="card-rank">${index + 1}</div>
+                    
+                    <div class="vacation-type">${rec.vacation_type}</div>
+                    
+                    <div class="location-info">
+                        <div class="location-type">${rec.location_type} 여행</div>
+                        <div class="recommended-location">${rec.recommended_location}</div>
+                    </div>
+                    
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <span class="stat-value">${rec.avg_satisfaction}</span>
+                            <span class="stat-label">만족도</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">${rec.experience_count}</span>
+                            <span class="stat-label">경험자</span>
+                        </div>
+                    </div>
+                    
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: ${rec.confidence * 100}%"></div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 10px; font-size: 0.9em; color: #666;">
+                        신뢰도 ${Math.round(rec.confidence * 100)}%
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        function displaySimilarUsers(similarUsers) {
+            const section = document.getElementById('similarUsersSection');
+            const list = document.getElementById('similarUsersList');
+            
+            section.style.display = 'block';
+            
+            similarUsers.forEach(user => {
+                const div = document.createElement('div');
+                div.className = 'similar-user-item';
+                
+                div.innerHTML = `
+                    <div class="similarity-score">${user.similarity}</div>
+                    <div class="user-details">
+                        <div class="user-vacation">${user.vacation_type}</div>
+                        <div class="user-meta">
+                            ${user.location} • ${user.satisfaction} • ${user.cost}
+                        </div>
+                    </div>
+                `;
+                
+                list.appendChild(div);
+            });
+        }
+
+        function displayError(message) {
+            document.getElementById('errorContainer').style.display = 'block';
+            document.getElementById('errorMessage').textContent = message;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>API 연동 테스트</title>
+</head>
+<body>
+    <h1>API 연동 테스트</h1>
+    
+    <button onclick="testStatus()">상태 확인 테스트</button>
+    <button onclick="testRegister()">회원가입 테스트</button>
+    
+    <div id="result"></div>
+
+    <script>
+        function showResult(message) {
+            document.getElementById('result').innerHTML = '<pre>' + JSON.stringify(message, null, 2) + '</pre>';
+        }
+
+        function testStatus() {
+            fetch('http://127.0.0.1:8000/api/status/')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('상태 확인 성공:', data);
+                    showResult(data);
+                })
+                .catch(error => {
+                    console.error('상태 확인 오류:', error);
+                    showResult('오류: ' + error.message);
+                });
+        }
+
+        function testRegister() {
+            const testData = {
+                "name": "홍길동",
+                "userid": "test123",
+                "password": "password123",
+                "password_confirm": "password123",
+                "age": "25",
+                "email": "test@example.com"
+            };
+
+            fetch('https://dt5857.pythonanywhere.com/api/surveys/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(testData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('회원가입 응답:', data);
+                showResult(data);
+            })
+            .catch(error => {
+                console.error('회원가입 오류:', error);
+                showResult('오류: ' + error.message);
+            });
+        }
+    </script>
+</body>
+</html>

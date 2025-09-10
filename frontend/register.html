@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>회원가입</h2>
+            <form id="registerForm" novalidate>
+                <!-- 이름 -->
+                <div class="form-group">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" required placeholder="이름을 입력하세요" />
+                    <p id="name-error" class="error-message"></p>
+                </div>
+
+                <!-- 아이디 + 중복체크 -->
+                <div class="form-group" style="position: relative;">
+                    <label for="userid">아이디</label>
+                    <div class="id-check-group">
+                        <input type="text" id="userid" required placeholder="아이디를 입력하세요" />
+                    </div>
+                    <p id="userid-error" class="error-message"></p>
+                    <p id="idStatus"></p>
+                </div>
+
+                <!-- 비밀번호 -->
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" required placeholder="비밀번호를 입력하세요" />
+                    <p id="password-error" class="error-message"></p>
+                </div>
+
+                <!-- 비밀번호 확인 -->
+                <div class="form-group">
+                    <label for="password2">비밀번호 확인</label>
+                    <input type="password" id="password2" required placeholder="비밀번호를 입력하세요" />
+                    <p id="password2-error" class="error-message"></p>
+                </div>
+
+                <!-- 나이 -->
+                <div class="form-group">
+                    <label for="age">나이</label>
+                    <input type="number" id="age" required placeholder="나이를 입력하세요" />
+                    <p id="age-error" class="error-message"></p>
+                </div>
+
+                <!-- 이메일 -->
+                <div class="form-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" required placeholder="이메일을 입력하세요" />
+                    <p id="email-error" class="error-message"></p>
+                </div>
+
+                <button type="submit" class="submit-btn">회원가입</button>
+            </form>
+            <p class="form-footer">
+                이미 계정이 있나요? <a href="/login.html">로그인</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let idAvailable = false;
+
+        function checkUserId() {
+            const userid = document.getElementById("userid").value.trim();
+
+            if (!userid) {
+                showIdStatus("아이디를 입력하세요.", true);
+                return;
+            }
+
+            // 실제 백엔드 주소로 변경 필요
+            fetch(`/check-id?userid=${encodeURIComponent(userid)}`)
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data.available) {
+                        idAvailable = true;
+                        showIdStatus("사용 가능한 아이디입니다.", false);
+                    } else {
+                        idAvailable = false;
+                        showIdStatus("이미 사용 중인 아이디입니다.", true);
+                    }
+                })
+                .catch(() => {
+                    idAvailable = false;
+                    showIdStatus("아이디 중복 체크에 실패했습니다. 다시 시도해주세요.", true);
+                });
+        }
+
+        function showIdStatus(message, isError = true) {
+            const status = document.getElementById("idStatus");
+            status.innerText = message;
+            status.style.color = isError ? "red" : "green";
+            if (message) {
+                status.classList.add("visible");
+            } else {
+                status.classList.remove("visible");
+            }
+        }
+
+        function showError(inputId, message) {
+            const errorEl = document.getElementById(inputId + "-error");
+            errorEl.textContent = message;
+            if (message) {
+                errorEl.classList.add("visible");
+            } else {
+                errorEl.classList.remove("visible");
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // 입력창 필터링 + 에러 메시지 지우기 한 번만 등록
+            const nameInput = document.getElementById('name');
+
+            nameInput.addEventListener('input', () => {
+                const value = nameInput.value;
+
+                const invalid = /[^\uAC00-\uD7A3]/.test(value);
+
+                if (value === '') {
+                    showError('name', '');
+                } else if (invalid) {
+                    showError('name', '한글만 입력 가능합니다')
+                } else {
+                    showError('name', '');
+                }
+            });
+
+
+
+            const useridInput = document.getElementById('userid');
+            useridInput.addEventListener('input', () => {
+                if (/[가-힣]/.test(useridInput.value)) {
+                    showError('userid', '아이디에는 한글을 사용할 수 없습니다.');
+                } else {
+                    showError('userid', '');
+                }
+                showIdStatus('');
+                idAvailable = false;
+            });
+
+            const passwordInput = document.getElementById('password');
+            let capsLockTooltip = null;
+
+            passwordInput.addEventListener('keyup', (e) => {
+                if (e.getModifierState && e.getModifierState('CapsLock')) {
+                    if (!capsLockTooltip) {
+                        const rect = passwordInput.getBoundingClientRect();
+
+                        capsLockTooltip = document.createElement('div');
+                        capsLockTooltip.textContent = 'Caps Lock이 켜져 있습니다!';
+                        capsLockTooltip.style.position = 'absolute';
+                        capsLockTooltip.style.color = 'red';
+                        capsLockTooltip.style.background = 'lightyellow';
+                        capsLockTooltip.style.border = '1px solid red';
+                        capsLockTooltip.style.padding = '5px';
+                        capsLockTooltip.style.borderRadius = '5px';
+                        capsLockTooltip.style.top = passwordInput.offsetTop - 30 + 'px';
+                        capsLockTooltip.style.left = passwordInput.offsetLeft + 'px';
+                        capsLockTooltip.classList.add('caps-tooltip');
+                        passwordInput.parentElement.appendChild(capsLockTooltip);
+                    }
+                } else {
+                    if (capsLockTooltip) {
+                        capsLockTooltip.remove();
+                        capsLockTooltip = null;
+                    }
+                }
+                showError('password', '');  // 입력 시 에러 메시지 제거
+            });
+
+            passwordInput.addEventListener('blur', () => {
+                if (capsLockTooltip) {
+                    capsLockTooltip.remove();
+                    capsLockTooltip = null;
+                }
+            })
+
+            const password2Input = document.getElementById('password2');
+            let capsLockTooltip2 = null;
+
+            password2Input.addEventListener('keyup', (e) => {
+                if (e.getModifierState && e.getModifierState('CapsLock')) {
+                    if (!capsLockTooltip2) {
+                        const rect = password2Input.getBoundingClientRect();
+
+                        capsLockTooltip2 = document.createElement('div');
+                        capsLockTooltip2.textContent = 'Caps Lock이 켜져 있습니다!';
+                        capsLockTooltip2.style.position = 'absolute';
+                        capsLockTooltip2.style.color = 'red';
+                        capsLockTooltip2.style.background = 'lightyellow';
+                        capsLockTooltip2.style.border = '1px solid red';
+                        capsLockTooltip2.style.padding = '5px';
+                        capsLockTooltip2.style.borderRadius = '5px';
+                        capsLockTooltip2.style.top = password2Input.offsetTop - 30 + 'px';
+                        capsLockTooltip2.style.left = password2Input.offsetLeft + 'px';
+                        capsLockTooltip2.classList.add('caps-tooltip');
+                        password2Input.parentElement.appendChild(capsLockTooltip2);
+                    }
+                } else {
+                    if (capsLockTooltip2) {
+                        capsLockTooltip2.remove();
+                        capsLockTooltip2 = null;
+                    }
+                }
+                showError('password2', '');  // 입력 시 에러 메시지 제거
+            });
+
+            password2Input.addEventListener('blur', () => {
+                if (capsLockTooltip2) {
+                    capsLockTooltip2.remove();
+                    capsLockTooltip2 = null;
+                }
+            })
+
+            const ageInput = document.getElementById('age');
+            ageInput.addEventListener('input', () => {
+                ageInput.value = ageInput.value.replace(/[^0-9]/g, '');
+                showError('age', '');
+            });
+
+            const emailInput = document.getElementById('email');
+            emailInput.addEventListener('input', () => {
+                emailInput.value = emailInput.value.replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '');
+                showError('email', '');
+            });
+        });
+
+        document.getElementById("registerForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // 모든 에러 초기화
+            ["name", "userid", "password", "password2", "age", "email"].forEach(id => showError(id, ''));
+            showIdStatus('');
+
+            const name = document.getElementById("name").value.trim();
+            const userid = document.getElementById("userid").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const password2 = document.getElementById("password2").value.trim();
+            const age = document.getElementById("age").value.trim();
+            const email = document.getElementById("email").value.trim();
+
+            // 이름 검사
+            if (!name) {
+                showError("name", "이름을 입력해주세요.");
+                document.getElementById("name").focus();
+                return;
+            }
+            if (!/^[가-힣]+$/.test(name)) {
+                showError("name", "이름은 한글만 입력 가능합니다.");
+                document.getElementById("name").focus();
+                return;
+            }
+
+            // 아이디 검사
+            if (!userid) {
+                showError("userid", "아이디를 입력해주세요.");
+                document.getElementById("userid").focus();
+                return;
+            }
+            if (/[가-힣]/.test(userid)) {
+                showError("userid", "아이디에는 한글을 사용할 수 없습니다.");
+                document.getElementById("userid").focus();
+                return;
+            }
+
+            // 비밀번호 검사
+            if (!password) {
+                showError("password", "비밀번호를 입력해주세요.");
+                document.getElementById("password").focus();
+                return;
+            }
+            if (!password2) {
+                showError("password2", "비밀번호 확인을 입력해주세요.");
+                document.getElementById("password2").focus();
+                return;
+            }
+            if (password !== password2) {
+                showError("password2", "비밀번호가 일치하지 않습니다.");
+                document.getElementById("password2").focus();
+                return;
+            }
+
+            // 나이 검사
+            if (!age) {
+                showError("age", "나이를 입력해주세요.");
+                document.getElementById("age").focus();
+                return;
+            }
+            if (!/^\d+$/.test(age)) {
+                showError("age", "나이는 숫자만 입력 가능합니다.");
+                document.getElementById("age").focus();
+                return;
+            }
+
+            // 이메일 검사
+            if (!email) {
+                showError("email", "이메일을 입력해주세요.");
+                document.getElementById("email").focus();
+                return;
+            }
+            if (/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/.test(email)) {
+                showError("email", "이메일에 한글을 포함할 수 없습니다.");
+                document.getElementById("email").focus();
+                return;
+            }
+            // 기존 @naver.com 제한을 일반 이메일로 변경
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showError("email", "올바른 이메일 형식이 아닙니다.");
+                document.getElementById("email").focus();
+                return;
+            }
+
+            // 회원가입 API 호출
+            const registerData = {
+                name: name,
+                userid: userid,
+                password: password,
+                password_confirm: password2,  // HTML의 password2를 API의 password_confirm으로 매핑
+                age: age,
+                email: email
+            };
+
+            fetch('https://dt5857.pythonanywhere.com/api/register/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(registerData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('회원가입이 완료되었습니다!');
+                        // 성공 시 로그인 페이지로 이동 (나중에 구현)
+                        // window.location.href = 'login.html';
+                    } else {
+                        // API에서 온 에러 메시지 표시
+                        alert('회원가입 실패: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('API 호출 오류:', error);
+                    alert('서버 연결에 문제가 발생했습니다. 다시 시도해주세요.');
+                });
+        });
+    </script>
+</body>
+
+</html>

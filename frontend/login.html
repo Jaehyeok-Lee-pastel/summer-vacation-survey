@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* 박스 높이 고정 */
+        .auth-box {
+            min-height: 420px;
+        }
+
+        /* 에러 메시지 고정 높이 */
+        .error-placeholder {
+            height: 20px;
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-footer a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>로그인</h2>
+            <form id="loginForm" novalidate>
+                <!-- 아이디 -->
+                <div class="form-group">
+                    <label for="login-userid">아이디</label>
+                    <input type="text" id="login-userid" required placeholder="아이디를 입력하세요" />
+                    <div class="error-placeholder" id="userid-error"></div>
+                </div>
+
+                <!-- 비밀번호 -->
+                <div class="form-group">
+                    <label for="login-password">비밀번호</label>
+                    <input type="password" id="login-password" required placeholder="비밀번호를 입력하세요" />
+                    <div class="error-placeholder" id="password-error"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">로그인</button>
+
+                <div class="form-footer">
+                    <a href="#">아이디/비밀번호 찾기</a>
+                    |
+                    <a href="register.html">회원가입</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const userid = document.getElementById("login-userid").value.trim();
+            const password = document.getElementById("login-password").value.trim();
+            const useridError = document.getElementById("userid-error");
+            const passwordError = document.getElementById("password-error");
+
+            useridError.textContent = "";
+            passwordError.textContent = "";
+
+            if (!userid) {
+                useridError.textContent = "아이디를 입력해주세요.";
+                return;
+            }
+
+            if (!password) {
+                passwordError.textContent = "비밀번호를 입력해주세요.";
+                return;
+            }
+
+            // 로그인 요청 (백엔드 API 주소로 수정)
+            fetch("https://dt5857.pythonanywhere.com/api/login/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ userid, password })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        // 로그인 성공 시
+                        console.log()
+                        window.location.href = "survey.html";
+                        
+                    } else {
+                        // 로그인 실패 시
+                        if (data.error === "no_user") {
+                            useridError.textContent = "존재하지 않는 아이디입니다.";
+                        } else if (data.error === "wrong_password") {
+                            passwordError.textContent = "비밀번호가 일치하지 않습니다.";
+                        } else {
+                            passwordError.textContent = "로그인에 실패했습니다. 다시 시도해주세요.";
+                        }
+                    }
+                })
+                .catch(err => {
+                    passwordError.textContent = "서버 오류가 발생했습니다. 다시 시도해주세요.";
+                    console.error(err);
+                });
+        });
+    </script>
+</body>
+
+</html>
