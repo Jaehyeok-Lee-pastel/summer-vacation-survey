@@ -375,7 +375,7 @@
             q10: document.getElementById("q10").value,
           };
 
-          fetch("https://dt5857.pythonanywhere.com/api/surveys/", {
+          fetch("http://127.0.0.1:8000/api/surveys/", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -387,7 +387,7 @@
               if (data.success) {
                 alert("설문조사 성공: " + data.message);
                 // 성공 시 결과 페이지로 이동 (나중에 구현)
-                window.location.href = "result.html";
+                window.location.href = `recommendation.html?survey_id=${data.survey_id}`;
               } else {
                 // API에서 온 에러 메시지 표시
                 alert("설문조사 실패: " + data.message);

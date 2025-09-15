@@ -5,253 +5,295 @@
         "location": "인천",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "경북",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "세종",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "제주",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "전남",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "세종",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "기타"
       },
       {
         "location": "부산",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "전북",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "전남",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "인천",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "충북",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "인천",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "충북",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "강원",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "대전",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "충남",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "경남",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "문화생활"
       },
       {
         "location": "대구",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "서울",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "강원",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "전남",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "전남",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "충남",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "대구",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "울산",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "서울",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "전북",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "세종",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "제주",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "부산",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "문화생활"
       },
       {
         "location": "대전",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "전북",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "제주",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "도시 관광"
       },
       {
         "location": "경남",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "부산",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "강원",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "경남",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "경남",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "대전",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "대구",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "충북",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "충북",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "등산, 캠핑"
       }
     ],
     "해외": [
@@ -259,145 +301,176 @@
         "location": "북미",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "문화생활"
       },
       {
         "location": "동아시아",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "중동",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "서유럽",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "동유럽",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "문화생활"
       },
       {
         "location": "동유럽",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "동남아시아",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "동아시아",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "아프리카",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "동유럽",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "아프리카",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "오세아니아",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "남미",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "오세아니아",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "동남아시아",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "남미",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
       },
       {
         "location": "중동",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "동아시아",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "북미",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "동남아시아",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "오세아니아",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "중동",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "북미",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "아프리카",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "등산, 캠핑"
+      },
+      {
+        "location": "오세아니아",
+        "satisfaction": "매우 만족",
+        "cost": "30만~50만 원",
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       }
     ]
   },
@@ -407,121 +480,386 @@
         "location": "서유럽",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "동아시아",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "아프리카",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "동아시아",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "북미",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "동아시아",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
       },
       {
         "location": "동아시아",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "남미",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "아프리카",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "오세아니아",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "중동",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "북미",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "오세아니아",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "동아시아",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "북미",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "오세아니아",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "동유럽",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "서유럽",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "북미",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "남미",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "7~15일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "동아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "7~15일",
+        "next_experience": "산·계곡에서 활동"
       }
     ],
     "국내": [
@@ -529,223 +867,309 @@
         "location": "경남",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "기타"
       },
       {
         "location": "전남",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "서울",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "경남",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "세종",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "경남",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "문화생활"
       },
       {
         "location": "대전",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "강원",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "인천",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "경북",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "경북",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "제주",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "대구",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "문화생활"
       },
       {
         "location": "경북",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "울산",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "경북",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "충북",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "경남",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "인천",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "광주",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "도시 관광"
       },
       {
         "location": "부산",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "대전",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "도시 관광"
       },
       {
         "location": "광주",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "인천",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "서울",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "충남",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "대구",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "인천",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "부산",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "전북",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "울산",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "제주",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "경북",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "광주",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "경남",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "전북",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "부산",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "문화생활"
+      },
+      {
+        "location": "광주",
+        "satisfaction": "보통",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "광주",
+        "satisfaction": "보통",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "광주",
+        "satisfaction": "보통",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "광주",
+        "satisfaction": "보통",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "광주",
+        "satisfaction": "보통",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "광주",
+        "satisfaction": "보통",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "광주",
+        "satisfaction": "보통",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       }
     ]
   },
@@ -755,61 +1179,211 @@
         "location": "동아시아",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "서유럽",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "남미",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "문화생활"
       },
       {
         "location": "동아시아",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "오세아니아",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "문화생활"
       },
       {
         "location": "북미",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "중동",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "기타"
       },
       {
         "location": "동남아시아",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "동아시아",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "도시 관광"
       },
       {
         "location": "남미",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "맛집 투어"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "휴양·힐링"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
       }
     ],
     "국내": [
@@ -817,127 +1391,148 @@
         "location": "전남",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "강원",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "경북",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "광주",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "전남",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "인천",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "전남",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "전북",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "경북",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "문화생활"
       },
       {
         "location": "충북",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "전남",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "울산",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "울산",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "문화생활"
       },
       {
         "location": "서울",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "충남",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "충북",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "강원",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "문화생활"
       },
       {
         "location": "경남",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "충남",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "서울",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "대전",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "도시 관광"
       }
     ]
   },
@@ -947,133 +1542,239 @@
         "location": "동아시아",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "문화생활"
       },
       {
         "location": "동남아시아",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "도시 관광"
       },
       {
         "location": "서유럽",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
       },
       {
         "location": "동아시아",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "오세아니아",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "오세아니아",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "오세아니아",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "오세아니아",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "중동",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "문화생활"
       },
       {
         "location": "동유럽",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "중동",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
       },
       {
         "location": "동아시아",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "북미",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "아프리카",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "동아시아",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
       },
       {
         "location": "북미",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "동유럽",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "북미",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "동남아시아",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "중동",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "아프리카",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "동남아시아",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "7~15일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "7~15일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "7~15일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "동유럽",
+        "satisfaction": "매우 만족",
+        "cost": "30만~50만 원",
+        "duration": "1일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "동아시아",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "동아시아",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "아프리카",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "아프리카",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "아프리카",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
       }
     ],
     "국내": [
@@ -1081,331 +1782,484 @@
         "location": "전남",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "울산",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "광주",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "경북",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "부산",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "기타"
       },
       {
         "location": "대구",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "세종",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "문화생활"
       },
       {
         "location": "경북",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "대전",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "경남",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "대구",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "인천",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "부산",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "전남",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "기타"
       },
       {
         "location": "서울",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "울산",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "경북",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
       },
       {
         "location": "대구",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "부산",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "대전",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "전북",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "울산",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
       },
       {
         "location": "전북",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "인천",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "제주",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "충북",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "대구",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "서울",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "제주",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "서울",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "전북",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "서울",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "세종",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "전북",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "울산",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "충남",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "광주",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "광주",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "제주",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "울산",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "인천",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "대전",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "세종",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "광주",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "대구",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "충남",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "충남",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "문화생활"
       },
       {
         "location": "경남",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "기타"
       },
       {
         "location": "강원",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "전남",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "도시 관광"
       },
       {
         "location": "경북",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "기타"
       },
       {
         "location": "전북",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "대전",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "충북",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "부산",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "맛집 투어"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
       }
     ]
   },
@@ -1415,151 +2269,729 @@
         "location": "오세아니아",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "동남아시아",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "동유럽",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "북미",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "문화생활"
       },
       {
         "location": "동남아시아",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "문화생활"
       },
       {
         "location": "서유럽",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "도시 관광"
       },
       {
         "location": "동아시아",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "중동",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "중동",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "오세아니아",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "오세아니아",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "동남아시아",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "남미",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "북미",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "동아시아",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "중동",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "동남아시아",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "북미",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "중동",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "오세아니아",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "문화생활"
       },
       {
         "location": "오세아니아",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "동유럽",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "오세아니아",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "오세아니아",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "중동",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "4~6일",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "동남아시아",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "오세아니아",
+        "satisfaction": "만족",
+        "cost": "200만 원 이상",
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "4~6일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "맛집 탐방"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": NaN,
+        "satisfaction": "매우 만족",
+        "cost": NaN,
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": NaN,
+        "satisfaction": "매우 만족",
+        "cost": NaN,
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": NaN,
+        "satisfaction": "매우 만족",
+        "cost": NaN,
+        "duration": "15일이상",
+        "next_experience": "바다/섬에서 물놀이"
       }
     ],
     "국내": [
@@ -1567,511 +2999,813 @@
         "location": "세종",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "제주",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "세종",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "전북",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "전남",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "충북",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
       },
       {
         "location": "전남",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "인천",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "서울",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "제주",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "서울",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "울산",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "전북",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "강원",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "충남",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "대전",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "문화생활"
       },
       {
         "location": "경북",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "충북",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "울산",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "기타"
       },
       {
         "location": "인천",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "대전",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "도시 관광"
       },
       {
         "location": "강원",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "세종",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "문화생활"
       },
       {
         "location": "인천",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "충북",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "경남",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "경북",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "서울",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "충남",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "대구",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "충남",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
       },
       {
         "location": "경남",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "기타"
       },
       {
         "location": "충남",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "전북",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "광주",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "경북",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "서울",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "세종",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "경남",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "충북",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "문화생활"
       },
       {
         "location": "전북",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "충남",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "대구",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "경북",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "대구",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "전북",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "전북",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "충북",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "충남",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "도시 관광"
       },
       {
         "location": "울산",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "전북",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "기타"
       },
       {
         "location": "울산",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "제주",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "광주",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "문화생활"
       },
       {
         "location": "강원",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "인천",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "충북",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "충남",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "부산",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "전남",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "기타"
       },
       {
         "location": "충북",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
       },
       {
         "location": "충북",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "충남",
         "satisfaction": "매우 만족",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "세종",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "문화생활"
       },
       {
         "location": "충남",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "경남",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "강원",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
-      },
-      {
-        "location": "국내",
-        "satisfaction": "매우 만족",
-        "cost": "50만~100만 원",
-        "duration": "4~6일"
-      },
-      {
-        "location": "국내",
-        "satisfaction": "매우 만족",
-        "cost": "50만~100만 원",
-        "duration": "4~6일"
-      },
-      {
-        "location": "국내",
-        "satisfaction": "매우 만족",
-        "cost": "50만~100만 원",
-        "duration": "4~6일"
-      },
-      {
-        "location": "국내",
-        "satisfaction": "매우 만족",
-        "cost": "50만~100만 원",
-        "duration": "4~6일"
-      },
-      {
-        "location": "국내",
-        "satisfaction": "매우 만족",
-        "cost": "50만~100만 원",
-        "duration": "4~6일"
-      },
-      {
-        "location": "국내",
-        "satisfaction": "매우 만족",
-        "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "부산",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "바다/섬에서 물놀이"
       },
       {
         "location": "부산",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "바다/섬에서 물놀이"
       },
       {
         "location": "부산",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "바다/섬에서 물놀이"
       },
       {
         "location": "부산",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "바다/섬에서 물놀이"
       },
       {
         "location": "부산",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "바다/섬에서 물놀이"
       },
       {
         "location": "부산",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "바다/섬에서 물놀이"
       },
       {
-        "location": NaN,
+        "location": "부산",
         "satisfaction": "매우 만족",
-        "cost": NaN,
-        "duration": "4~6일"
+        "cost": "50만~100만 원",
+        "duration": "4~6일",
+        "next_experience": "바다/섬에서 물놀이"
       },
       {
-        "location": NaN,
+        "location": "부산",
         "satisfaction": "매우 만족",
-        "cost": NaN,
-        "duration": "4~6일"
+        "cost": "50만~100만 원",
+        "duration": "4~6일",
+        "next_experience": "바다/섬에서 물놀이"
       },
       {
-        "location": NaN,
+        "location": "대전",
         "satisfaction": "매우 만족",
-        "cost": NaN,
-        "duration": "4~6일"
+        "cost": "10만~30만 원",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
-        "location": NaN,
+        "location": "대전",
         "satisfaction": "매우 만족",
-        "cost": NaN,
-        "duration": "4~6일"
+        "cost": "10만~30만 원",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
-        "location": NaN,
+        "location": "대전",
         "satisfaction": "매우 만족",
-        "cost": NaN,
-        "duration": "4~6일"
+        "cost": "10만~30만 원",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
-        "location": NaN,
+        "location": "대전",
         "satisfaction": "매우 만족",
-        "cost": NaN,
-        "duration": "4~6일"
+        "cost": "10만~30만 원",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "대전",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "대전",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "대전",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "대전",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "대전",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "대전",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
+      },
+      {
+        "location": "부산",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "4~6일",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "부산",
+        "satisfaction": "매우 만족",
+        "cost": "50만~100만 원",
+        "duration": "4~6일",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서울",
+        "satisfaction": "매우 만족",
+        "cost": "10만 원 이하",
+        "duration": "1일",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "7~15일",
+        "next_experience": "도시 관광"
       }
     ]
   },
@@ -2081,43 +3815,71 @@
         "location": "부산",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "대전",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "제주",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "충남",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "전남",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "문화생활"
       },
       {
         "location": "대전",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "전남",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "해수욕, 물놀이"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "휴양·힐링"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "휴양·힐링"
+      },
+      {
+        "location": "기타",
+        "satisfaction": "매우 만족",
+        "cost": "기타",
+        "duration": "4~6일",
+        "next_experience": "휴양·힐링"
       }
     ],
     "해외": [
@@ -2125,19 +3887,36 @@
         "location": "북미",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "중동",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "서유럽",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
+      },
+      {
+        "location": "동아시아",
+        "satisfaction": "만족",
+        "cost": "50만~100만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "동아시아",
+        "satisfaction": "만족",
+        "cost": "50만~100만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
       }
     ]
   },
@@ -2147,133 +3926,295 @@
         "location": "중동",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "동유럽",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "오세아니아",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "문화생활"
       },
       {
         "location": "아프리카",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "중동",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "중동",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "동유럽",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "동남아시아",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "동유럽",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "아프리카",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "남미",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "중동",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "서유럽",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "서유럽",
         "satisfaction": "보통",
         "cost": "50만~100만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "아프리카",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "오세아니아",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "남미",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "오세아니아",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "아프리카",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "동남아시아",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "북미",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "문화생활"
       },
       {
         "location": "중동",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "100만~200만 원",
+        "duration": "15일 이상",
+        "next_experience": "바다/섬에서 물놀이"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "북미",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "서유럽",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
       }
     ],
     "국내": [
@@ -2281,211 +4222,544 @@
         "location": "대구",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "제주",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "서울",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "제주",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "인천",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "서울",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "강원",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "기타"
       },
       {
         "location": "부산",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "도시 관광"
       },
       {
         "location": "전북",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "강원",
         "satisfaction": "만족",
         "cost": "100만~200만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "전북",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "서울",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "경북",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "서울",
         "satisfaction": "보통",
         "cost": "100만~200만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "경남",
         "satisfaction": "만족",
         "cost": "10만~30만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
       },
       {
         "location": "충남",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "맛집 투어"
       },
       {
         "location": "광주",
         "satisfaction": "만족",
         "cost": "30만~50만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "부산",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "1일"
+        "duration": "1일",
+        "next_experience": "기타"
       },
       {
         "location": "울산",
         "satisfaction": "보통",
         "cost": "10만 원 이하",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "기타"
       },
       {
         "location": "대구",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "제주",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "경북",
         "satisfaction": "만족",
         "cost": "10만 원 이하",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "충남",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "서울",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "강원",
         "satisfaction": "만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "제주",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "7~15일"
+        "duration": "7~15일",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "경북",
         "satisfaction": "매우 만족",
         "cost": "50만~100만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "도시 관광"
       },
       {
         "location": "부산",
         "satisfaction": "매우 만족",
         "cost": "10만 원 이하",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "부산",
         "satisfaction": "매우 만족",
         "cost": "200만 원 이상",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "등산, 캠핑"
       },
       {
         "location": "충북",
         "satisfaction": "보통",
         "cost": "30만~50만 원",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "친척·지인 방문"
       },
       {
         "location": "충북",
         "satisfaction": "매우 만족",
         "cost": "100만~200만 원",
-        "duration": "2~3일"
+        "duration": "2~3일",
+        "next_experience": "해수욕, 물놀이"
       },
       {
         "location": "전남",
         "satisfaction": "보통",
         "cost": "200만 원 이상",
-        "duration": "4~6일"
+        "duration": "4~6일",
+        "next_experience": "기타"
       },
       {
         "location": "제주",
         "satisfaction": "만족",
         "cost": "200만 원 이상",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "휴양·힐링"
       },
       {
         "location": "대전",
         "satisfaction": "보통",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "문화생활"
       },
       {
         "location": "서울",
         "satisfaction": "매우 만족",
         "cost": "10만~30만 원",
-        "duration": "15일 이상"
+        "duration": "15일 이상",
+        "next_experience": "도시 관광"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "강원",
+        "satisfaction": "만족",
+        "cost": "10만~30만 원",
+        "duration": "2~3일",
+        "next_experience": "기타"
+      },
+      {
+        "location": "부산",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "부산",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "부산",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "부산",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "부산",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "부산",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "부산",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "부산",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "부산",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      }
+    ]
+  },
+  "기타": {
+    "해외": [
+      {
+        "location": "동아시아",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "동아시아",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "동아시아",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
+      },
+      {
+        "location": "동아시아",
+        "satisfaction": "매우 만족",
+        "cost": "10만~30만 원",
+        "duration": "15일 이상",
+        "next_experience": "산·계곡에서 활동"
       }
     ]
   }

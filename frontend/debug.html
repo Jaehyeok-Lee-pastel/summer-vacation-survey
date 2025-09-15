@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>추천 시스템 플로우 디버깅</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .debug-container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .step {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .step-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .result-box {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .error-box {
+            background: #ffebee;
+            border: 1px solid #f44336;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        .test-section {
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .flow-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .flow-step::after {
+            content: '↓';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            color: #3498db;
+        }
+
+        .flow-step:last-child::after {
+            display: none;
+        }
+
+        .step-number {
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .issue-found {
+            background: #ffebee !important;
+            border-color: #f44336 !important;
+        }
+
+        .issue-found .step-number {
+            background: #f44336 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-container">
+        <h1>🔍 추천 시스템 플로우 디버깅</h1>
+        
+        <div class="test-section">
+            <h2>현재 플로우 상태 확인</h2>
+            <button onclick="checkFullFlow()">전체 플로우 검증</button>
+            <button onclick="simulateRecommendation()">추천 시뮬레이션</button>
+            <button onclick="checkDataFlow()">데이터 흐름 확인</button>
+        </div>
+
+        <div class="flow-diagram" id="flowDiagram">
+            <div class="flow-step" id="step1">
+                <div class="step-number">1</div>
+                <div>
+                    <strong>사용자 설문 데이터 입력</strong><br>
+                    <small>HTML 폼 → Django View (q1~q10)</small>
+                </div>
+            </div>
+            
+            <div class="flow-step" id="step2">
+                <div class="step-number">2</div>
+                <div>
+                    <strong>데이터 변환</strong><br>
+                    <small>HTML 키 → ML 호환 한글 키</small>
+                </div>
+            </div>
+            
+            <div class="flow-step" id="step3">
+                <div class="step-number">3</div>
+                <div>
+                    <strong>유사 사용자 탐색</strong><br>
+                    <small>코사인 유사도 계산</small>
+                </div>
+            </div>
+            
+            <div class="flow-step" id="step4">
+                <div class="step-number">4</div>
+                <div>
+                    <strong>학습된 패턴 매칭</strong><br>
+                    <small>vacation_patterns에서 추천 생성</small>
+                </div>
+            </div>
+            
+            <div class="flow-step" id="step5">
+                <div class="step-number">5</div>
+                <div>
+                    <strong>추천 결과 반환</strong><br>
+                    <small>JSON 형태로 프론트엔드 전달</small>
+                </div>
+            </div>
+        </div>
+
+        <div id="debugResults"></div>
+    </div>
+
+    <script>
+        function checkFullFlow() {
+            const results = document.getElementById('debugResults');
+            results.innerHTML = `
+                <div class="step">
+                    <div class="step-title">1. 설문 데이터 매핑 검증</div>
+                    <div class="code-block">// views.py의 데이터 변환 부분 확인 필요
+user_data = {
+    '연령대': data.get('q1'),           // 예: "20대"
+    '성별': data.get('q2'),             // 예: "여성"  
+    '가장_최근_여름_휴가': data.get('q3'), // 예: "해수욕, 물놀이"
+    '휴가_장소_국내_해외': data.get('q4'),  // 예: "국내"
+    // ... 기타 필드들
+}</div>
+                    <div class="result-box">
+                        <strong>확인 포인트:</strong><br>
+                        - HTML 폼의 name 속성과 Django에서 받는 키가 일치하는가?<br>
+                        - 모든 q1~q10 값이 올바르게 매핑되는가?<br>
+                        - 한글 키 이름이 CSV 컬럼명과 정확히 일치하는가?
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">2. ML 서비스 상태 검증</div>
+                    <div class="code-block">// Django Shell에서 실행할 코드
+from surveys.ml_service import get_ml_service, is_ml_service_ready
+
+print("ML 서비스 준비 상태:", is_ml_service_ready())
+ml_service = get_ml_service()
+print("학습 상태:", ml_service.is_trained)
+print("학습된 패턴 수:", len(ml_service.vacation_patterns))</div>
+                    <div class="result-box">
+                        <strong>확인 포인트:</strong><br>
+                        - ML 서비스가 초기화되었는가?<br>
+                        - 학습된 데이터가 메모리에 로드되었는가?<br>
+                        - vacation_patterns에 데이터가 있는가?
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">3. 유사도 계산 검증</div>
+                    <div class="code-block">// vacation_recommender.py의 _find_similar_users() 확인
+selected_features = ['연령대', '성별', '함께한_사람', '휴가_장소_국내_해외', '가장_최근_여름_휴가']
+
+// 문제 가능성:
+// 1. 특징이 너무 적음 (5개만 사용)
+// 2. 학습 데이터가 부족함
+// 3. 모든 사용자가 비슷한 특징을 가짐</div>
+                    <div class="error-box">
+                        <strong>의심되는 문제:</strong><br>
+                        - 현재 5개 특징만 사용하여 사용자 구분이 어려움<br>
+                        - 20대 여성, 해수욕 선호자는 모두 비슷한 유사도를 가짐<br>
+                        - 결과적으로 같은 유사 사용자 그룹이 계속 선택됨
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">4. 추천 생성 로직 검증</div>
+                    <div class="code-block">// _generate_recommendations() 함수 확인
+for vacation_type, location_data in self.vacation_patterns.items():
+    for location_type, experiences in location_data.items():
+        if len(experiences) >= 2:  // 최소 2명 이상 경험
+            // Counter().most_common(1): 가장 많은 location 선택
+            location_counts = Counter(exp['location'] for exp in experiences)
+            top_location = location_counts.most_common(1)[0]</div>
+                    <div class="error-box">
+                        <strong>핵심 문제 발견:</strong><br>
+                        - 학습된 패턴이 고정되어 있음<br>
+                        - 사용자 입력과 관계없이 항상 가장 많은 location을 추천<br>
+                        - 개인화 요소가 전혀 없음
+                    </div>
+                </div>
+            `;
+        }
+
+        function simulateRecommendation() {
+            const results = document.getElementById('debugResults');
+            results.innerHTML = `
+                <div class="step">
+                    <div class="step-title">추천 시뮬레이션 테스트</div>
+                    <div class="code-block">// Django Shell에서 테스트
+from surveys.ml_service import get_ml_service
+
+# 테스트 데이터 1: 20대 여성, 국내, 해수욕
+test1 = {
+    '연령대': '20대', '성별': '여성', 
+    '가장_최근_여름_휴가': '해수욕, 물놀이',
+    '휴가_장소_국내_해외': '국내'
+}
+
+# 테스트 데이터 2: 20대 여성, 해외, 해수욕 (일부만 다름)
+test2 = {
+    '연령대': '20대', '성별': '여성',
+    '가장_최근_여름_휴가': '해수욕, 물놀이', 
+    '휴가_장소_국내_해외': '해외'
+}
+
+ml_service = get_ml_service()
+result1 = ml_service.get_recommendations(test1)
+result2 = ml_service.get_recommendations(test2)
+
+# 결과 비교
+print("테스트1 추천:", [r['recommended_location'] for r in result1['recommendations']])
+print("테스트2 추천:", [r['recommended_location'] for r in result2['recommendations']])</div>
+                    <div class="result-box">
+                        <strong>예상 결과:</strong><br>
+                        테스트1: ['충남', '서울', '전남', '대전']<br>
+                        테스트2: ['동남아시아', '서울', '기타']<br><br>
+                        <strong>만약 똑같다면:</strong> 유사도 계산이나 추천 로직에 문제
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">학습 데이터 분석</div>
+                    <div class="code-block">// 학습된 패턴 확인
+ml_service = get_ml_service()
+
+print("=== 학습된 vacation_patterns ===")
+for vacation_type, location_data in ml_service.vacation_patterns.items():
+    print(f"{vacation_type}:")
+    for location_type, experiences in location_data.items():
+        locations = [exp['location'] for exp in experiences]
+        location_counts = {}
+        for loc in locations:
+            location_counts[loc] = location_counts.get(loc, 0) + 1
+        print(f"  {location_type}: {location_counts}")
+        
+# 만약 모든 패턴이 똑같다면 학습 데이터 자체에 문제</div>
+                </div>
+            `;
+        }
+
+        function checkDataFlow() {
+            // 각 단계별로 문제가 있는지 시각적으로 표시
+            markPotentialIssue('step3', '유사도 계산에서 구분 부족');
+            markPotentialIssue('step4', '고정된 추천 로직');
+
+            const results = document.getElementById('debugResults');
+            results.innerHTML = `
+                <div class="step">
+                    <div class="step-title">데이터 흐름 문제 분석</div>
+                    <div class="error-box">
+                        <strong>발견된 주요 문제들:</strong><br><br>
+                        
+                        <strong>1. 유사도 계산 문제 (Step 3)</strong><br>
+                        - 현재 5개 특징만 사용: 연령대, 성별, 함께한_사람, 휴가_장소_국내_해외, 가장_최근_여름_휴가<br>
+                        - 대부분의 사용자가 비슷한 특징을 가져 유사도가 높음<br>
+                        - 결과: 항상 같은 유사 사용자들이 선택됨<br><br>
+                        
+                        <strong>2. 추천 로직 문제 (Step 4)</strong><br>
+                        - Counter().most_common(1)로 항상 가장 많은 location을 선택<br>
+                        - 사용자별 개인화 요소가 전혀 없음<br>
+                        - 학습된 패턴이 고정되어 있어 새로운 사용자 특성을 반영하지 못함<br><br>
+                        
+                        <strong>3. 학습 데이터 문제</strong><br>
+                        - 충분한 다양성이 없을 가능성<br>
+                        - 특정 패턴(해수욕 + 국내 = 충남)이 너무 많아 편향됨
+                    </div>
+                    
+                    <div class="result-box">
+                        <strong>즉시 확인할 방법:</strong><br><br>
+                        
+                        <strong>1. Django Shell에서 학습 데이터 확인:</strong><br>
+                        <code>
+                        from surveys.ml_service import get_ml_service<br>
+                        ml_service = get_ml_service()<br>
+                        print(len(ml_service.vacation_patterns))  # 패턴 수<br>
+                        # 각 패턴별 데이터 분포 확인
+                        </code><br><br>
+                        
+                        <strong>2. 다른 설문 데이터로 테스트:</strong><br>
+                        - 연령대만 바꿔서 테스트<br>
+                        - 성별만 바꿔서 테스트<br>
+                        - 휴가 유형만 바꿔서 테스트<br><br>
+                        
+                        <strong>3. 유사도 점수 확인:</strong><br>
+                        - similar_users의 similarity_score 값들이 모두 비슷한지 확인
+                    </div>
+                </div>
+            `;
+        }
+
+        function markPotentialIssue(stepId, issue) {
+            const step = document.getElementById(stepId);
+            step.classList.add('issue-found');
+            step.innerHTML += `<div style="color: #f44336; font-size: 0.9em; margin-top: 5px;">⚠️ ${issue}</div>`;
+        }
+    </script>
+</body>
+</html>

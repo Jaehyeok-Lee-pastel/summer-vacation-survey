@@ -89,7 +89,7 @@
   <script>
     async function drawRecentVacationChart() {
       const res = await fetch(
-        "https://dt5857.pythonanywhere.com/api/data/recent-vacation-ratio_all/"
+        "http://127.0.0.1:8000/api/data/recent-vacation-ratio_all/"
       );
       const json = await res.json();
       console.log(json); // 확인용 로그

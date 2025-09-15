@@ -45,7 +45,7 @@ def survey_api(request):
     )
     survey.save()
 
-    return JsonResponse({'success': True, 'message': '설문조사가 저장되었습니다.'})
+    return JsonResponse({'success': True, 'message': '설문조사가 저장되었습니다.', 'survey_id': survey.id})
 
 
 
@@ -267,6 +267,7 @@ def save_survey_and_get_recommendations(request):
             location_detail = data.get('q4-2')  # overseas_location 활용
 
         print('location_detail',location_detail)
+        print()
         user_data = {
             '연령대': data.get('q1'),
             '성별': data.get('q2'),
@@ -315,4 +316,45 @@ def save_survey_and_get_recommendations(request):
             'success': False,
             'error': '설문 저장 및 추천 생성 중 오류가 발생했습니다.',
             'details': str(e)
+        }, status=500)
+
+
+@csrf_exempt
+def get_survey_data(request, survey_id):
+    """특정 설문 데이터 조회 API"""
+    if request.method != 'GET':
+        return JsonResponse({'success': False, 'error': 'GET 요청만 허용됩니다.'}, status=405)
+    
+    try:
+        survey = Survey.objects.get(id=survey_id)
+        
+        survey_data = {
+            "q1": survey.age_group,
+            "q2": survey.gender,
+            "q3": survey.vacation_type,
+            "q4": survey.location_type,
+            "q4-1": survey.domestic_location,
+            "q4-2": survey.overseas_location,
+            "q5": survey.transportation,
+            "q6": survey.duration,
+            "q7": survey.companion,
+            "q8": survey.cost,
+            "q9": survey.satisfaction,
+            "q10": survey.next_vacation_type
+        }
+        print('survey_data', survey_data)
+        return JsonResponse({
+            'success': True,
+            'survey_data': survey_data
+        })
+        
+    except Survey.DoesNotExist:
+        return JsonResponse({
+            'success': False,
+            'error': '해당 설문조사를 찾을 수 없습니다.'
+        }, status=404)
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': f'오류가 발생했습니다: {str(e)}'
         }, status=500)

@@ -87,9 +87,8 @@
                 passwordError.textContent = "비밀번호를 입력해주세요.";
                 return;
             }
-
             // 로그인 요청 (백엔드 API 주소로 수정)
-            fetch("https://dt5857.pythonanywhere.com/api/login/", {
+            fetch("http://127.0.0.1:8000/api/login/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
